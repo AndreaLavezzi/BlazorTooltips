@@ -78,7 +78,7 @@ namespace BlazorTooltips
             if (firstRender)
             {
                 _rendered = true;
-                _jsModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/BlazorTooltips/bootstrap.tooltip.js");
+                _jsModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Omniacore.BlazorTooltips/bootstrap.tooltip.js");
                 await Setup();
             }
         }
