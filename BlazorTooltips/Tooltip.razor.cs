@@ -92,7 +92,9 @@ namespace BlazorTooltips
 
         public async ValueTask DisposeAsync()
         {
-            await Destroy();
+            try { await Destroy(); }
+            catch (JSDisconnectedException) { }
+            catch (ObjectDisposedException) { }
         }
 
         private async Task Setup()
